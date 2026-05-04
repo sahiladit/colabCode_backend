@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
 
     io.to(room).emit("room_users", rooms[room]);
 
-    if (roomCode[room]) {
+    if (roomCode[room] !== undefined)  {
     socket.emit("receive_code", roomCode[room]);
   }
   });
