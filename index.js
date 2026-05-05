@@ -32,9 +32,9 @@ io.on("connection", (socket) => {
 
     // add user
     rooms[room].push({
-      socketId: socket.id,
-      user
-    });
+  socketId: socket.id,
+  user
+});
 
     // send users list
     io.to(room).emit("room_users", rooms[room]);
